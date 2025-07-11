@@ -8,51 +8,181 @@
 <style>
     .title{
         font-size: 35px;
+        text-align: center;
     }
     .super-hero{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     .hero{
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid black;
-        height: 500px;
-        width: 70%;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
     }
     .hero-left{
-        height: 300px;
-        width: 300px;
-        align-items: left;
-        margin-top: 30px;
+        flex: 1;
+        max-width: 400px;
         font-size: 22px;
-        /* border: 2px solid black; */
-        margin-right: 100px;
+        padding-right: 50px;
     }
     .hero-img{
         height: 350px;
         width: 280px;
+        object-fit: cover;
         margin-left: 100px;
+        margin-top: 50px;
+    }
+    .skills{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .skills-main{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .skills hr {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+    }
+    .projects{
+        width: 80%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .skills-first-row, .project-first-row{
+        padding: 20px;
+        text-align: left;
+    }
+    .skill-category {
+        margin-bottom: 30px;
+        margin-left: 100px;
+    }
+    
+    .skill-category h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: left;
+    }
+    
+    .skill-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+    
+    .skill-icons img {
+        width: 60px;
+        height: 60px;
+        transition: transform 0.3s ease;
+    }
+    
+    .skill-icons img:hover {
+        transform: scale(1.1);
     }
 </style>
 <body>
     <div>
-        <h1 align="center" class="title">HET BHALANI</h1>
+        <h1 class="title">HET BHALANI</h1>
         <div class="super-hero">
             <div class="hero">
                 <div class="hero-left">
-                    <p>Hello, my name is Het Bhalani, i am a self-tought <b>Machine Learning & Deep Learning</b> Engineer.</p>
-                    <p>I am fast learner and love to explore new things.</p>
+                    <p>Hello, my name is Het Bhalani, I am a self-taught <b>Machine Learning & Deep Learning</b> Engineer.</p>
+                    <p>I am a fast learner and I love exploring new things.</p>
                     <p>I LOVE MATHS❤️</p>
                 </div>
-                <div class="hero-img">
+                <div>
                     <img src="./imgs/hero-img.jpeg" class="hero-img" alt="My Image :\">
                 </div>
             </div>
+
+            <div class="skills">
+                <h1 class="skills-main">Skills/Tech</h1>
+                <hr>
+                <div class="skills-first-row">
+                    <div class="skill-category">
+                        <h3>📊 Machine Learning & Data Science</h3>
+                        <div class="skill-icons">
+                            <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch">
+                            <img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow">
+                            <img src="https://skillicons.dev/icons?i=sklearn" alt="Scikit-learn">
+                            <img src="https://skillicons.dev/icons?i=opencv" alt="OpenCV">
+                            <img src="imgs/np-2.svg" height="60" alt="NumPy">
+                            <img src="imgs/plt-2.svg" height="60" alt="Matplotlib">
+                            <img src="imgs/pd-2.svg" height="60" alt="Pandas">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🌐 Web Development</h3>
+                        <div class="skill-icons">
+                            <img src="https://skillicons.dev/icons?i=html" alt="HTML">
+                            <img src="https://skillicons.dev/icons?i=css" alt="CSS">
+                            <img src="https://skillicons.dev/icons?i=js" alt="JavaScript">
+                            <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript">
+                            <img src="https://skillicons.dev/icons?i=react" alt="React">
+                            <img src="https://skillicons.dev/icons?i=express" alt="Express">
+                            <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js">
+                            <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind">
+                            <img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🖥️ Programming Languages</h3>
+                        <div class="skill-icons">
+                            <img src="https://skillicons.dev/icons?i=c" alt="C">
+                            <img src="https://skillicons.dev/icons?i=cpp" alt="C++">
+                            <img src="https://skillicons.dev/icons?i=java" alt="Java">
+                            <img src="https://skillicons.dev/icons?i=dart" alt="Dart">
+                            <img src="https://skillicons.dev/icons?i=py" alt="Python">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🛢️ Databases & Tools</h3>
+                        <div class="skill-icons">
+                            <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB">
+                            <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite">
+                            <img src="https://skillicons.dev/icons?i=postman" alt="Postman">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>📱 App Development</h3>
+                        <div class="skill-icons">
+                            <img src="https://skillicons.dev/icons?i=flutter" alt="Flutter">
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>⚙️ Environments, Tools & Version Control</h3>
+                        <div class="skill-icons">
+                            <img src="https://skillicons.dev/icons?i=git" alt="Git">
+                            <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
+                            <img src="https://skillicons.dev/icons?i=bash" alt="Bash">
+                            <img src="https://skillicons.dev/icons?i=linux" alt="Linux">
+                            <img src="https://skillicons.dev/icons?i=windows" alt="Windows">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="projects">
+                <h1 class="skills-main">Projects</h1>
+                <hr>
                 <div class="project-first-row">
-                    
+                    <!-- Add your projects content here -->
                 </div>
             </div>
         </div>
