@@ -1,310 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Het Bhalani - ML Engineer</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: #fdfdfd;
-        color: #222;
-      }
-
-      .title {
-        font-size: 36px;
-        text-align: center;
-        margin-top: 30px;
-        letter-spacing: 1px;
-      }
-
-      .super-hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      .hero {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 40px;
-      }
-
-      .hero-left {
-        flex: 1;
-        min-width: 300px;
-        max-width: 450px;
-        font-size: 20px;
-        line-height: 1.6;
-        padding: 20px;
-      }
-
-      .hero-img {
-        height: 350px;
-        width: 280px;
-        object-fit: cover;
-        margin-top: 20px;
-        border-radius: 12px;
-      }
-
-      .skills,
-      .projects {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto 40px auto;
-        padding: 0 20px;
-      }
-
-      .skills-main {
-        text-align: center;
-        font-size: 30px;
-        margin-bottom: 10px;
-      }
-
-      hr {
-        width: 80%;
-        margin: 10px auto 30px auto;
-        border: 1px solid #ccc;
-      }
-
-      .skill-category {
-        margin-bottom: 40px;
-      }
-
-      .skill-category h3 {
-        font-size: 22px;
-        margin-bottom: 12px;
-        color: #444;
-      }
-
-      .skill-icons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      .skill-icons img {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.3s ease;
-      }
-
-      .skill-icons img:hover {
-        transform: scale(1.15);
-      }
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        padding: 20px;
-        justify-items: center;
-      }
-
-      .card {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 15px;
-        width: 100%;
-        max-width: 300px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-        cursor: pointer;
-      }
-
-      .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 6px;
-      }
-
-      .card h3 {
-        margin: 15px 0 10px;
-        font-size: 20px;
-        color: #333;
-      }
-
-      .card p {
-        font-size: 15px;
-        color: #555;
-      }
-
-
-      @media (max-width: 768px) {
-        .hero {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .hero-left {
-          padding: 0;
-        }
-
-        .skill-category h3 {
-          text-align: center;
-        }
-
-        .skill-icons {
-          justify-content: center;
-        }
-      }
-    </style>
+    <title>Het Bhalani | ML/DL/NLP Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 class="title">HET BHALANI</h1>
-    <div class="super-hero">
-      <div class="hero">
-        <div class="hero-left">
-          <p>
-            Hello, my name is Het Bhalani. I am a self-taught
-            <b>Machine Learning & Deep Learning</b> Engineer.
-          </p>
-          <p>I’m a fast learner and love exploring new things.</p>
-          <p>I LOVE MATHS ❤️</p>
-        </div>
-        <img src="./imgs/hero-img.jpeg" class="hero-img" alt="Het Bhalani" />
-      </div>
+    <button id="theme-toggle" aria-label="Toggle dark mode">
+      <span class="theme-icon">◐</span>
+    </button>
 
-      <div class="skills">
-        <h1 class="skills-main">Skills / Technologies</h1>
-        <hr />
-
-        <div class="skill-category">
-          <h3>📊 Machine Learning & Data Science</h3>
-          <div class="skill-icons">
-            <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" />
-            <img
-              src="https://skillicons.dev/icons?i=tensorflow"
-              alt="TensorFlow"
-            />
-            <img
-              src="https://skillicons.dev/icons?i=sklearn"
-              alt="Scikit-learn"
-            />
-            <img src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" />
-            <img src="imgs/np-2.svg" alt="NumPy" />
-            <img src="imgs/plt-2.svg" alt="Matplotlib" />
-            <img src="imgs/pd-2.svg" alt="Pandas" />
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <div class="profile-image">
+            <div class="profile-placeholder">HB</div>
+          </div>
+          <div class="hero-text">
+            <h1>Hi, I'm Het Bhalani</h1>
+            <p class="tagline">Computer Science Student | ML/DL/NLP Engineer | Tech Enthusiast</p>
           </div>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3>🌐 Web Development</h3>
-          <div class="skill-icons">
-            <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
-            <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
-            <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" />
-            <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" />
-            <img src="https://skillicons.dev/icons?i=react" alt="React" />
-            <img src="https://skillicons.dev/icons?i=express" alt="Express" />
-            <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" />
-            <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" />
-            <img
-              src="https://skillicons.dev/icons?i=bootstrap"
-              alt="Bootstrap"
-            />
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>Computer Science Engineering student with a strong foundation in Machine Learning, Deep Learning, and NLP. Experienced in developing AI-powered applications, custom neural networks, and end-to-end ML pipelines.</p>
+          <p>Skilled at transforming raw data into insights, building real-world applications, and deploying ML models. Also proficient in full-stack development with modern frameworks. Seeking opportunities as a Machine Learning Engineer, NLP Engineer, or AI Software Engineer.</p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">60+</div>
+              <div class="stat-label">Stars on GitHub</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">150+</div>
+              <div class="stat-label">LeetCode Problems</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">35+</div>
+              <div class="stat-label">Public Repositories</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">9.05</div>
+              <div class="stat-label">Current CGPA</div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3>🖥️ Programming Languages</h3>
-          <div class="skill-icons">
-            <img src="https://skillicons.dev/icons?i=c" alt="C" />
-            <img src="https://skillicons.dev/icons?i=cpp" alt="C++" />
-            <img src="https://skillicons.dev/icons?i=java" alt="Java" />
-            <img src="https://skillicons.dev/icons?i=dart" alt="Dart" />
-            <img src="https://skillicons.dev/icons?i=py" alt="Python" />
+      <section id="skills">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-categories">
+          <div class="skill-category">
+            <h3 class="category-title">Languages</h3>
+            <div class="skills-grid">
+              <span class="skill-badge languages">Python</span>
+              <span class="skill-badge languages">Java</span>
+              <span class="skill-badge languages">C</span>
+              <span class="skill-badge languages">C++</span>
+              <span class="skill-badge languages">C#</span>
+              <span class="skill-badge languages">JavaScript</span>
+              <span class="skill-badge languages">Dart</span>
+              <span class="skill-badge languages">SQL</span>
+              <span class="skill-badge languages">HTML/CSS/JS</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">ML/DL</h3>
+            <div class="skills-grid">
+              <span class="skill-badge ml-dl">TensorFlow</span>
+              <span class="skill-badge ml-dl">PyTorch</span>
+              <span class="skill-badge ml-dl">Scikit-learn</span>
+              <span class="skill-badge ml-dl">Hugging Face</span>
+              <span class="skill-badge ml-dl">Keras</span>
+              <span class="skill-badge ml-dl">LangChain</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Data/NLP</h3>
+            <div class="skills-grid">
+              <span class="skill-badge data-nlp">Pandas</span>
+              <span class="skill-badge data-nlp">NumPy</span>
+              <span class="skill-badge data-nlp">Matplotlib</span>
+              <span class="skill-badge data-nlp">Seaborn</span>
+              <span class="skill-badge data-nlp">NLTK</span>
+              <span class="skill-badge data-nlp">SpaCy</span>
+              <span class="skill-badge data-nlp">Transformers</span>
+ 
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Web/App</h3>
+            <div class="skills-grid">
+              <span class="skill-badge web-app">FastAPI</span>
+              <span class="skill-badge web-app">Streamlit</span>
+              <span class="skill-badge web-app">Flask</span>
+              <span class="skill-badge web-app">React.js</span>
+              <span class="skill-badge web-app">Express.js</span>
+              <span class="skill-badge web-app">Node.js</span>
+              <span class="skill-badge web-app">Flutter</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Databases</h3>
+            <div class="skills-grid">
+              <span class="skill-badge databases">MongoDB</span>
+              <span class="skill-badge databases">MS SQL</span>
+              <span class="skill-badge databases">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Tools</h3>
+            <div class="skills-grid">
+              <span class="skill-badge tools">Git</span>
+              <span class="skill-badge tools">GitHub</span>
+              <span class="skill-badge tools">Linux</span>
+              <span class="skill-badge tools">Docker</span>
+              <span class="skill-badge tools">Postman</span>
+              <span class="skill-badge tools">Terminal/CMD</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="skill-category">
-          <h3>🛢️ Databases & Tools</h3>
-          <div class="skill-icons">
-            <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" />
-            <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" />
-            <img src="https://skillicons.dev/icons?i=postman" alt="Postman" />
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card featured">
+            <div class="project-tag">NLP</div>
+            <h3>CineSense – Movie Review Sentiment Analyzer</h3>
+            <p>Scraped IMDb reviews and fine-tuned a RoBERTa model for sentiment classification. Deployed an interactive dashboard for real-time review analysis and polarity visualization.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>Streamlit</span>
+              <span>FastAPI</span>
+              <span>Hugging Face Transformers</span>
+            </div>
+            <div class="project-meta">
+              <span>📅 Sep 2025</span>
+              <span>🎯 Sentiment Analysis</span>
+            </div>
+            <a href="https://github.com/hetbhalani/Cine_Sense" target="_blank" class="project-link">View Project →</a>
           </div>
-        </div>
-
-        <div class="skill-category">
-          <h3>📱 App Development</h3>
-          <div class="skill-icons">
-            <img src="https://skillicons.dev/icons?i=flutter" alt="Flutter" />
+          <div class="project-card featured">
+            <div class="project-tag">NLP</div>
+            <h3>Text Cleaning Studio</h3>
+            <p>Built a text preprocessing toolkit with noise removal, typo correction, and contraction expansion. Enabled batch file processing and a clean, user-friendly interface for NLP workflows.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>NLP</span>
+              <span>Streamlit</span>
+              <span>FastAPI</span>
+            </div>
+            <div class="project-meta">
+              <span>📅 Aug 2025</span>
+              <span>🔧 Text Preprocessing</span>
+            </div>
+            <a href="https://github.com/hetbhalani/text-clean-studio" target="_blank" class="project-link">View Project →</a>
           </div>
-        </div>
-
-        <div class="skill-category">
-          <h3>⚙️ Environments & Version Control</h3>
-          <div class="skill-icons">
-            <img src="https://skillicons.dev/icons?i=git" alt="Git" />
-            <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
-            <img src="https://skillicons.dev/icons?i=bash" alt="Bash" />
-            <img src="https://skillicons.dev/icons?i=linux" alt="Linux" />
-            <img src="https://skillicons.dev/icons?i=windows" alt="Windows" />
-          </div>
-        </div>
-      </div>
-
-      <div class="projects">
-        <h1 class="skills-main">Projects</h1>
-        <hr />
-        <div class="card-grid">
-          <div class="card">
-            <img src="./imgs/nn.png" alt="NN" />
+          <div class="project-card featured">
+            <div class="project-tag">Deep Learning</div>
             <h3>Neural Network from Scratch</h3>
-            <p>
-              ANN from Scratch using only NumPy and MATH (no high libraries)
-            </p>
+            <p>Implemented an ANN architecture (784–64–10) using ReLU and Softmax layers. Derived and coded backpropagation, gradient descent, and categorical cross-entropy loss manually.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>NumPy</span>
+            </div>
+            <div class="project-meta">
+              <span>📅 Jun 2025</span>
+              <span>🧠 From Scratch</span>
+            </div>
+            <a href="https://github.com/hetbhalani/Neural_Network_from_Scratch" target="_blank" class="project-link">View Project →</a>
           </div>
-          <div class="card">
-            <img src="./imgs/movie.png" alt="Expense Tracker" />
+          <div class="project-card">
+            <div class="project-tag">ML</div>
             <h3>Movie Recommendation System</h3>
-            <p>
-              ML-based movie recommendation system wich will recommend movies based on your previous favourite movie.
-            </p>
-          </div>
-          <div class="card">
-            <img src="./imgs/hill.png" alt="Brain MRI Classifier" />
-            <h3>Hand Gestures</h3>
-            <p>
-              Play hill climb racing game using hand gestures, made with opencv and mideapipe
-            </p>
-          </div>
-          <div class="card">
-            <img src="./imgs/project4.png" alt="Chatbot" />
-            <h3>💬 ML Chatbot</h3>
-            <p>
-              Chatbot built with NLP techniques and TensorFlow, trained on
-              custom intents.
-            </p>
-          </div>
-          <div class="card">
-            <img src="./imgs/project5.png" alt="Stock Predictor" />
-            <h3>📈 Stock Predictor</h3>
-            <p>
-              LSTM-based model to forecast stock prices using historical
-              financial data.
-            </p>
-          </div>
-          <div class="card">
-            <img src="./imgs/project6.png" alt="FoodCal API" />
-            <h3>🧪 FoodCal API</h3>
-            <p>
-              REST API that takes food image and returns estimated calories +
-              nutrients.
-            </p>
+            <p>Developed a content-based recommendation engine using TF-IDF and cosine similarity. Integrated Flask web interface for real-time personalized movie suggestions.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>Flask</span>
+            </div>
+            <div class="project-meta">
+              <span>📅 Mar 2025</span>
+              <span>🎬 Recommendations</span>
+            </div>
+            <a href="https://github.com/hetbhalani/movie-recommendation-system" target="_blank" class="project-link">View Project →</a>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Teaching Assistant – Data Structures</h4>
+              <p class="timeline-location">Darshan University, Rajkot, Gujarat</p>
+              <p class="timeline-date">Dec 2024 – Mar 2025</p>
+              <ul>
+                <li>Conducted lab sessions on data structures, guiding students in implementing algorithms in C</li>
+                <li>Helped clarify core concepts of DSA and assisted students with practical assignments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey">
+        <h2>Journey</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>School</h4>
+              <p>Foundation in academics and early interest in technology</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>High School</h4>
+              <p>Developed passion for mathematics and computer science</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>BTech in Computer Science</h4>
+              <p>Deep dive into algorithms, data structures, and software engineering</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Machine Learning Projects & Research</h4>
+              <p>Self-taught journey in ML/DL/NLP with multiple production-ready projects</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements">
+        <h2>Achievements & Highlights</h2>
+        <div class="achievements-list">
+          <div class="achievement-item">
+            <div class="achievement-icon">💻</div>
+            <div class="achievement-content">
+              <h4>Solved 150+ Problems on LeetCode</h4>
+              <p>Strengthened DSA and problem-solving skills through consistent practice</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="achievement-icon">⭐</div>
+            <div class="achievement-content">
+              <h4>Active GitHub Contributor</h4>
+              <p>Active contributor on GitHub with ML/DL projects and collaborative development</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="achievement-icon">🏆</div>
+            <div class="achievement-content">
+              <h4>Kaggle Participant</h4>
+              <p>Active contributor on Kaggle with ML/DL projects and data science competitions</p>
+            </div>
+          </div>
+          <div class="achievement-item">
+            <div class="achievement-icon">🔧</div>
+            <div class="achievement-content">
+              <h4>Version Control Expert</h4>
+              <p>Experienced with version control (Git/GitHub) and collaborative development</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="more-about">
+        <h2>Beyond Code</h2>
+        <div class="more-about-content">
+          <p>Coding is just one side of me — I’m endlessly curious and love exploring everything. From playing harmonium, singing Gujarati bhajans, editing videos, to chess, gaming, math, astrophysics, philosophy, and cooking — I dive into it all with full passion. I’m also a cinephile and enjoy capturing life through photography and videography.</p>
+          <p>Every hobby feeds my creativity and sharpens my mind, just like building AI models. I thrive on learning, experimenting, and connecting ideas across different worlds.</p>
+      
+          <div class="interests-grid">
+            <div class="interest-card">
+              <h4>🎵 Creative Arts</h4>
+              <p>Harmonium, singing, video editing, photography</p>
+            </div>
+            <div class="interest-card">
+              <h4>🧠 Mind & Logic</h4>
+              <p>Chess, math, astrophysics, philosophy</p>
+            </div>
+            <div class="interest-card">
+              <h4>🎮 Life & Fun</h4>
+              <p>Gaming, cooking, movies & web series, exploring new ideas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+          <a href="mailto:bhalanihet2006@gmail.com" class="contact-link">Email</a>
+          <a href="https://github.com/hetbhalani" target="_blank" class="contact-link">GitHub</a>
+          <a href="https://linkedin.com/in/het-bhalani-20403b2a8/" target="_blank" class="contact-link">LinkedIn</a>
+          <a href="https://www.kaggle.com/hetbhalani9" target="_blank" class="contact-link">Kaggle</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Het Bhalani | Built with ❤️ using IBM Plex Mono</p>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
