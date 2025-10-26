@@ -153,6 +153,16 @@ p {
   box-shadow: 0 8px 24px var(--shadow);
 }
 
+.profile-emoji {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+
 .hero-text {
   flex: 1;
   min-width: 300px;
@@ -617,6 +627,36 @@ p {
   margin-right: auto;
 }
 
+.resume-download {
+  margin-bottom: 2rem;
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--accent-blue-light), var(--accent-teal-light));
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.resume-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--shadow);
+  border-color: var(--accent-blue);
+}
+
+.resume-button i {
+  font-size: 1rem;
+}
+
 .social-icons {
   display: flex;
   justify-content: flex-start;
@@ -687,6 +727,11 @@ footer {
     width: 100px;
     height: 100px;
     font-size: 2rem;
+  }
+
+  .profile-emoji {
+    width: 100px;
+    height: 100px;
   }
 
   .stats-grid {
