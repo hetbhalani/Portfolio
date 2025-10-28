@@ -13,6 +13,7 @@
   --card-bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08);
   --accent-blue: #2563eb;
+  --nav-bg: rgba(255, 255, 255, 0.2);
   --accent-green: #059669;
   --accent-orange: #ea580c;
   --accent-teal: #0d9488;
@@ -31,6 +32,7 @@
   --card-bg: #0f0f0f;
   --shadow: rgba(255, 255, 255, 0.05);
   --accent-blue: #3b82f6;
+  --nav-bg: rgba(15, 15, 15, 0.2);
   --accent-green: #10b981;
   --accent-orange: #f97316;
   --accent-teal: #14b8a6;
@@ -40,13 +42,120 @@
   --accent-teal-light: #134e4a;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   font-family: 'IBM Plex Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
-  scroll-behavior: smooth;
+  padding-top: 80px;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+  padding: 0 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  min-width: 400px;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--nav-bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.nav-link:hover {
+  background-color: var(--accent-blue);
+  color: white;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    top: 15px;
+    min-width: calc(100% - 40px);
+    padding: 0 15px;
+  }
+  
+  .nav-content {
+    gap: 10px;
+  }
+  
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px var(--shadow);
 }
 
 main {
@@ -57,6 +166,7 @@ main {
 
 section {
   margin-bottom: 80px;
+  scroll-margin-top: 0px;
 }
 
 h1 {
@@ -389,6 +499,126 @@ p {
   border-color: #06b6d4;
 }
 
+/* Currently Learning Section */
+#learning {
+  scroll-margin-top: 20px;
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.learning-card {
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid var(--accent-blue);
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.learning-card:hover {
+  box-shadow: 0 8px 24px var(--shadow);
+  transform: translateY(-4px);
+}
+
+.learning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.learning-icon {
+  font-size: 2rem;
+  line-height: 1;
+  filter: grayscale(0.2);
+}
+
+.progress-circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.progress-ring-circle {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-ring-circle.bg {
+  stroke: var(--border-color);
+  opacity: 0.3;
+}
+
+.progress-ring-circle.progress {
+  stroke: var(--accent-blue);
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.learning-card h3 {
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.learning-card p {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  flex-grow: 1;
+  color: var(--secondary-text);
+  line-height: 1.5;
+}
+
+.learning-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.learning-tags span {
+  background-color: var(--hover-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  border: 1px solid var(--border-color);
+  color: var(--secondary-text);
+  font-weight: 500;
+}
+
+.learning-tags span:hover {
+  background-color: var(--accent-blue-light);
+  border-color: var(--accent-blue);
+  transform: translateY(-1px);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -398,6 +628,7 @@ p {
 .project-card {
   padding: 22px;
   border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-blue);
   border-radius: 8px;
   background-color: var(--card-bg);
   transition: all 0.3s ease;
@@ -406,7 +637,7 @@ p {
 }
 
 .project-card.featured {
-  border-top: 3px solid var(--accent-blue);
+  /* Featured indicator removed - using left border instead */
 }
 
 .project-card:hover {
@@ -702,8 +933,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
   main {
     padding: 48px 18px;
+  }
+
+  .nav-content {
+    padding: 0 18px;
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 6px 10px;
   }
 
   h1 {

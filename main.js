@@ -29,6 +29,24 @@ const observer = new IntersectionObserver(
   }
 );
 
+// Scroll to top button functionality
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section');
   sections.forEach((section) => {
@@ -36,5 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(section);
+  });
+
+  // Fix progress circles
+  const progressCircles = document.querySelectorAll('.progress-circle');
+  progressCircles.forEach((circle) => {
+    const progress = parseInt(circle.getAttribute('data-progress'));
+    const progressRing = circle.querySelector('.progress-ring-circle.progress');
+    
+    if (progressRing && !isNaN(progress)) {
+      // Circle radius is 20, so circumference = 2πr = 2π × 20 ≈ 125.66
+      const circumference = 2 * Math.PI * 20;
+      const offset = circumference * (1 - progress / 100);
+      
+      progressRing.style.strokeDasharray = circumference;
+      progressRing.style.strokeDashoffset = circumference;
+      
+      // Animate the progress
+      setTimeout(() => {
+        progressRing.style.transition = 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        progressRing.style.strokeDashoffset = offset;
+      }, 100);
+    }
   });
 });

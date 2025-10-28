@@ -4,15 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Het Bhalani | ML/DL/NLP Engineer</title>
+    <title>Het Bhalani</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+
     <button id="theme-toggle" aria-label="Toggle dark mode">
       <span class="theme-icon">◐</span>
+    </button>
+
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <main>
@@ -23,7 +36,7 @@
           </div>
           <div class="hero-text">
             <h1>Hi, I'm Het Bhalani</h1>
-            <p class="tagline">Computer Science Student | ML/DL/NLP Engineer | Tech Enthusiast</p>
+            <p class="tagline">Computer Science Student | ML, Dl & NLP Practitioner | Building Intelligent Systems</p>
           </div>
         </div>
       </section>
@@ -124,6 +137,67 @@
               <span class="skill-badge tools">Docker</span>
               <span class="skill-badge tools">Postman</span>
               <span class="skill-badge tools">Terminal/CMD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="learning">
+        <h2>Currently Learning</h2>
+        <p style="margin-bottom: 20px; color: var(--secondary-text); font-size: 0.9rem;">I believe in continuous learning and love exploring emerging technologies in AI and ML.
+          Here’s what I’m currently diving into, constantly pushing my boundaries to stay ahead in this ever-evolving field.</p>
+        <div class="learning-grid">
+          <div class="learning-card">
+            <div class="learning-header">
+              <div class="learning-icon">🔗</div>
+              <div class="progress-circle" data-progress="60">
+                <svg class="progress-ring" viewBox="0 0 50 50">
+                  <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
+                  <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
+                </svg>
+                <span class="progress-text">60%</span>
+              </div>
+            </div>
+            <h3>LangChain & RAG</h3>
+            <p>Learning to build advanced LLM applications using LangChain including RAG pipelines, prompt chaining, and custom agent workflows.</p>
+            <div class="learning-tags">
+              <span>RAG</span>
+              <span>LangChain</span>
+            </div>
+          </div>
+          <div class="learning-card">
+            <div class="learning-header">
+              <div class="learning-icon">🤖</div>
+              <div class="progress-circle" data-progress="70">
+                <svg class="progress-ring" viewBox="0 0 50 50">
+                  <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
+                  <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
+                </svg>
+                <span class="progress-text">70%</span>
+              </div>
+            </div>
+            <h3>Fine-tuning LLMs</h3>
+            <p>Exploring model fine-tuning with Hugging Face Transformers to adapt pre-trained models for custom datasets and tasks.</p>
+            <div class="learning-tags">
+              <span>Fine-tuning</span>
+              <span>Hugging Face</span>
+            </div>
+          </div>
+          <div class="learning-card">
+            <div class="learning-header">
+              <div class="learning-icon">🐧</div>
+              <div class="progress-circle" data-progress="30">
+                <svg class="progress-ring" viewBox="0 0 50 50">
+                  <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
+                  <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
+                </svg>
+                <span class="progress-text">30%</span>
+              </div>
+            </div>
+            <h3>Linux & CLI</h3>
+            <p>Exploring Linux fundamentals and mastering command-line tools to enhance system control, automation, and development efficiency.</p>
+            <div class="learning-tags">
+              <span>Linux</span>
             </div>
           </div>
         </div>
@@ -248,7 +322,7 @@
       </section>
 
       <section id="journey">
-        <h2>Journey</h2>
+        <h2>Education Timeline</h2>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-marker"></div>
