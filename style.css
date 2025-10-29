@@ -109,6 +109,13 @@ body {
   transform: translateY(-1px);
 }
 
+.nav-link.active {
+  /* Keep active state semantic but visually neutral so clicks/scrolls don't leave the nav colored */
+  background-color: transparent;
+  color: var(--text-color);
+  transform: none;
+}
+
 @media (max-width: 768px) {
   .navbar {
     top: 15px;
@@ -636,9 +643,7 @@ p {
   flex-direction: column;
 }
 
-.project-card.featured {
-  /* Featured indicator removed - using left border instead */
-}
+/* Removed empty .project-card.featured ruleset to satisfy linter */
 
 .project-card:hover {
   box-shadow: 0 8px 24px var(--shadow);
@@ -780,6 +785,26 @@ p {
 .achievement-content p {
   font-size: 0.85rem;
   margin: 0;
+}
+
+/* Keep achievement links visually stable when pressed/visited, but maintain focus outline for accessibility */
+.achievements-list .achievement-content a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+.achievements-list .achievement-content a:visited,
+.achievements-list .achievement-content a:active {
+  color: var(--accent-blue);
+}
+.achievements-list .achievement-content a:focus {
+  /* Remove default focus ring for mouse users */
+  outline: none;
+}
+.achievements-list .achievement-content a:focus-visible {
+  /* Keep a visible focus for keyboard users */
+  outline: 2px dashed var(--accent-blue);
+  outline-offset: 2px;
 }
 
 .more-about-content p {

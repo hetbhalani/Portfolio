@@ -56,6 +56,91 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(section);
   });
 
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.nav-link');
+  // We'll create the spyObserver later but declare it here so click handlers can pause/resume it.
+  let spyObserver = null;
+
+  function getNavbarHeight() {
+    if (!navbar) return 0;
+    // Use boundingClientRect to account for actual rendered height
+    const rect = navbar.getBoundingClientRect();
+    // Add a small extra offset so the section heading isn't hidden under the nav
+    return Math.ceil(rect.height) + 12; // 12px breathing room
+  }
+
+  function pauseSpyFor(duration = 800) {
+    if (!spyObserver) return;
+    try {
+      spyObserver.disconnect();
+    } catch (err) {
+      // ignore
+    }
+    // Re-observe after duration
+    setTimeout(() => {
+      sections.forEach((sec) => spyObserver.observe(sec));
+    }, duration);
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href || !href.startsWith('#')) return; // external or non-anchor
+
+      const targetId = href.slice(1);
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      e.preventDefault();
+
+      const navbarHeight = getNavbarHeight();
+      const targetY = targetEl.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+      // Blur the link so it doesn't keep browser focus styles
+      try { link.blur(); } catch (err) { /* ignore */ }
+      // Clear any active state immediately so it doesn't stay blue
+      clearActiveLinks();
+      // Pause the spy while the smooth scroll happens so it won't re-add `.active` prematurely
+      pauseSpyFor(900);
+
+      // Use smooth scroll and do NOT modify location.hash. This keeps the URL unchanged.
+      window.scrollTo({ top: Math.max(0, Math.floor(targetY)), behavior: 'smooth' });
+    });
+  });
+
+  // Scrollspy: highlight the active nav-link based on section visibility, WITHOUT changing the URL
+  const spyOptions = {
+    root: null,
+    // We want the section to be considered active when more than ~40% is visible.
+    threshold: 0.4,
+    // Compensate visually for the fixed navbar so the observer triggers when the content is under the navbar
+    rootMargin: `-${getNavbarHeight()}px 0px -40% 0px`
+  };
+
+  function clearActiveLinks() {
+    navLinks.forEach((l) => l.classList.remove('active'));
+  }
+
+  spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.id;
+      const link = document.querySelector(`.nav-link[href="#${id}"]`);
+      if (!link) return;
+
+      if (entry.isIntersecting) {
+        clearActiveLinks();
+        link.classList.add('active');
+      } else {
+        if (link.classList.contains('active') && !entry.isIntersecting) {
+          link.classList.remove('active');
+        }
+      }
+    });
+  }, spyOptions);
+
+  sections.forEach((sec) => spyObserver.observe(sec));
+
+
   // Fix progress circles
   const progressCircles = document.querySelectorAll('.progress-circle');
   progressCircles.forEach((circle) => {

@@ -1,450 +1,478 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Het Bhalani</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-content">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Het Bhalani</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="assets/alien.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <span class="theme-icon">◐</span>
+  </button>
+
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <div class="profile-image">
+          <img src="assets/alien.png" alt="Alien emoji" class="profile-emoji">
+        </div>
+        <div class="hero-text">
+          <h1>Hi, I'm Het Bhalani</h1>
+          <p class="tagline">Computer Science Student | ML, Dl & NLP Practitioner | Building Intelligent Systems</p>
+        </div>
       </div>
-    </nav>
+    </section>
 
-    <button id="theme-toggle" aria-label="Toggle dark mode">
-      <span class="theme-icon">◐</span>
-    </button>
-
-    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <main>
-      <section id="hero">
-        <div class="hero-content">
-          <div class="profile-image">
-            <img src="assets/alien.png" alt="Alien emoji" class="profile-emoji">
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>Computer Science Engineering student with a strong foundation in Machine Learning, Deep Learning, and NLP.
+          Experienced in developing AI-powered applications, custom neural networks, and end-to-end ML pipelines.</p>
+        <p>Skilled at transforming raw data into insights, building real-world applications, and deploying ML models.
+          Also proficient in full-stack development with modern frameworks. Seeking opportunities as a Machine Learning
+          Engineer, NLP Engineer, or AI Software Engineer.</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">60+</div>
+            <div class="stat-label">Stars on GitHub</div>
           </div>
-          <div class="hero-text">
-            <h1>Hi, I'm Het Bhalani</h1>
-            <p class="tagline">Computer Science Student | ML, Dl & NLP Practitioner | Building Intelligent Systems</p>
+          <div class="stat-card">
+            <div class="stat-number">160+</div>
+            <div class="stat-label">LeetCode Problems</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">35+</div>
+            <div class="stat-label">Public Repositories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">9.05</div>
+            <div class="stat-label">Current CGPA</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <p>Computer Science Engineering student with a strong foundation in Machine Learning, Deep Learning, and NLP. Experienced in developing AI-powered applications, custom neural networks, and end-to-end ML pipelines.</p>
-          <p>Skilled at transforming raw data into insights, building real-world applications, and deploying ML models. Also proficient in full-stack development with modern frameworks. Seeking opportunities as a Machine Learning Engineer, NLP Engineer, or AI Software Engineer.</p>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">60+</div>
-              <div class="stat-label">Stars on GitHub</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">150+</div>
-              <div class="stat-label">LeetCode Problems</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">35+</div>
-              <div class="stat-label">Public Repositories</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">9.05</div>
-              <div class="stat-label">Current CGPA</div>
-            </div>
+    <section id="skills">
+      <h2>Skills & Technologies</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3 class="category-title">Languages</h3>
+          <div class="skills-grid">
+            <span class="skill-badge languages">Python</span>
+            <span class="skill-badge languages">Java</span>
+            <span class="skill-badge languages">C</span>
+            <span class="skill-badge languages">C++</span>
+            <span class="skill-badge languages">C#</span>
+            <span class="skill-badge languages">JavaScript</span>
+            <span class="skill-badge languages">Dart</span>
+            <span class="skill-badge languages">SQL</span>
+            <span class="skill-badge languages">HTML/CSS/JS</span>
           </div>
         </div>
-      </section>
-
-      <section id="skills">
-        <h2>Skills & Technologies</h2>
-        <div class="skills-categories">
-          <div class="skill-category">
-            <h3 class="category-title">Languages</h3>
-            <div class="skills-grid">
-              <span class="skill-badge languages">Python</span>
-              <span class="skill-badge languages">Java</span>
-              <span class="skill-badge languages">C</span>
-              <span class="skill-badge languages">C++</span>
-              <span class="skill-badge languages">C#</span>
-              <span class="skill-badge languages">JavaScript</span>
-              <span class="skill-badge languages">Dart</span>
-              <span class="skill-badge languages">SQL</span>
-              <span class="skill-badge languages">HTML/CSS/JS</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="category-title">ML/DL</h3>
-            <div class="skills-grid">
-              <span class="skill-badge ml-dl">TensorFlow</span>
-              <span class="skill-badge ml-dl">PyTorch</span>
-              <span class="skill-badge ml-dl">Scikit-learn</span>
-              <span class="skill-badge ml-dl">Hugging Face</span>
-              <span class="skill-badge ml-dl">Keras</span>
-              <span class="skill-badge ml-dl">LangChain</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="category-title">Data/NLP</h3>
-            <div class="skills-grid">
-              <span class="skill-badge data-nlp">Pandas</span>
-              <span class="skill-badge data-nlp">NumPy</span>
-              <span class="skill-badge data-nlp">Matplotlib</span>
-              <span class="skill-badge data-nlp">Seaborn</span>
-              <span class="skill-badge data-nlp">NLTK</span>
-              <span class="skill-badge data-nlp">SpaCy</span>
-              <span class="skill-badge data-nlp">Transformers</span>
- 
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="category-title">Web/App</h3>
-            <div class="skills-grid">
-              <span class="skill-badge web-app">FastAPI</span>
-              <span class="skill-badge web-app">Streamlit</span>
-              <span class="skill-badge web-app">Flask</span>
-              <span class="skill-badge web-app">React.js</span>
-              <span class="skill-badge web-app">Express.js</span>
-              <span class="skill-badge web-app">Node.js</span>
-              <span class="skill-badge web-app">Flutter</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="category-title">Databases</h3>
-            <div class="skills-grid">
-              <span class="skill-badge databases">MongoDB</span>
-              <span class="skill-badge databases">MS SQL</span>
-              <span class="skill-badge databases">PostgreSQL</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3 class="category-title">Tools</h3>
-            <div class="skills-grid">
-              <span class="skill-badge tools">Git</span>
-              <span class="skill-badge tools">GitHub</span>
-              <span class="skill-badge tools">Linux</span>
-              <span class="skill-badge tools">Docker</span>
-              <span class="skill-badge tools">Postman</span>
-              <span class="skill-badge tools">Terminal/CMD</span>
-            </div>
+        <div class="skill-category">
+          <h3 class="category-title">ML/DL</h3>
+          <div class="skills-grid">
+            <span class="skill-badge ml-dl">TensorFlow</span>
+            <span class="skill-badge ml-dl">PyTorch</span>
+            <span class="skill-badge ml-dl">Scikit-learn</span>
+            <span class="skill-badge ml-dl">Hugging Face</span>
+            <span class="skill-badge ml-dl">Keras</span>
+            <span class="skill-badge ml-dl">LangChain</span>
           </div>
         </div>
-      </section>
+        <div class="skill-category">
+          <h3 class="category-title">Data/NLP</h3>
+          <div class="skills-grid">
+            <span class="skill-badge data-nlp">Pandas</span>
+            <span class="skill-badge data-nlp">NumPy</span>
+            <span class="skill-badge data-nlp">Matplotlib</span>
+            <span class="skill-badge data-nlp">Seaborn</span>
+            <span class="skill-badge data-nlp">NLTK</span>
+            <span class="skill-badge data-nlp">SpaCy</span>
+            <span class="skill-badge data-nlp">Transformers</span>
 
-      <section id="learning">
-        <h2>Currently Learning</h2>
-        <p style="margin-bottom: 20px; color: var(--secondary-text); font-size: 0.9rem;">I believe in continuous learning and love exploring emerging technologies in AI and ML.
-          Here’s what I’m currently diving into, constantly pushing my boundaries to stay ahead in this ever-evolving field.</p>
-        <div class="learning-grid">
-          <div class="learning-card">
-            <div class="learning-header">
-              <div class="learning-icon">🔗</div>
-              <div class="progress-circle" data-progress="60">
-                <svg class="progress-ring" viewBox="0 0 50 50">
-                  <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
-                  <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
-                </svg>
-                <span class="progress-text">60%</span>
-              </div>
-            </div>
-            <h3>LangChain & RAG</h3>
-            <p>Learning to build advanced LLM applications using LangChain including RAG pipelines, prompt chaining, and custom agent workflows.</p>
-            <div class="learning-tags">
-              <span>RAG</span>
-              <span>LangChain</span>
-            </div>
-          </div>
-          <div class="learning-card">
-            <div class="learning-header">
-              <div class="learning-icon">🤖</div>
-              <div class="progress-circle" data-progress="70">
-                <svg class="progress-ring" viewBox="0 0 50 50">
-                  <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
-                  <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
-                </svg>
-                <span class="progress-text">70%</span>
-              </div>
-            </div>
-            <h3>Fine-tuning LLMs</h3>
-            <p>Exploring model fine-tuning with Hugging Face Transformers to adapt pre-trained models for custom datasets and tasks.</p>
-            <div class="learning-tags">
-              <span>Fine-tuning</span>
-              <span>Hugging Face</span>
-            </div>
-          </div>
-          <div class="learning-card">
-            <div class="learning-header">
-              <div class="learning-icon">🐧</div>
-              <div class="progress-circle" data-progress="30">
-                <svg class="progress-ring" viewBox="0 0 50 50">
-                  <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
-                  <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
-                </svg>
-                <span class="progress-text">30%</span>
-              </div>
-            </div>
-            <h3>Linux & CLI</h3>
-            <p>Exploring Linux fundamentals and mastering command-line tools to enhance system control, automation, and development efficiency.</p>
-            <div class="learning-tags">
-              <span>Linux</span>
-            </div>
           </div>
         </div>
-      </section>
-
-      <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card featured">
-            <div class="project-tag">NLP</div>
-            <h3>CineSense – Movie Review Sentiment Analyzer</h3>
-            <p>Scraped IMDb reviews and fine-tuned a RoBERTa model for sentiment classification. Deployed an interactive dashboard for real-time review analysis and polarity visualization.</p>
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>Streamlit</span>
-              <span>FastAPI</span>
-              <span>Hugging Face Transformers</span>
-            </div>
-            <div class="project-meta">
-              <span>📅 Sep 2025</span>
-              <span>🎯 Sentiment Analysis</span>
-            </div>
-            <a href="https://github.com/hetbhalani/Cine_Sense" target="_blank" class="project-link">View Project →</a>
-          </div>
-          <div class="project-card featured">
-            <div class="project-tag">NLP</div>
-            <h3>Text Cleaning Studio</h3>
-            <p>Built a text preprocessing toolkit with noise removal, typo correction, and contraction expansion. Enabled batch file processing and a clean, user-friendly interface for NLP workflows.</p>
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>NLP</span>
-              <span>Streamlit</span>
-              <span>FastAPI</span>
-            </div>
-            <div class="project-meta">
-              <span>📅 Aug 2025</span>
-              <span>🔧 Text Preprocessing</span>
-            </div>
-            <a href="https://github.com/hetbhalani/text-clean-studio" target="_blank" class="project-link">View Project →</a>
-          </div>
-          <div class="project-card featured">
-            <div class="project-tag">DL</div>
-            <h3>Neural Network from Scratch</h3>
-            <p>Implemented an ANN architecture (784–64–10) using ReLU and Softmax layers. Derived and coded backpropagation, gradient descent, and categorical cross-entropy loss manually.</p>
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>NumPy</span>
-            </div>
-            <div class="project-meta">
-              <span>📅 Jun 2025</span>
-              <span>🧠 From Scratch</span>
-            </div>
-            <a href="https://github.com/hetbhalani/Neural_Network_from_Scratch" target="_blank" class="project-link">View Project →</a>
-          </div>
-          <div class="project-card">
-            <div class="project-tag">ML</div>
-            <h3>Movie Recommendation System</h3>
-            <p>Developed a content-based recommendation engine using TF-IDF and cosine similarity. Integrated Flask web interface for real-time personalized movie suggestions.</p>
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>Scikit-learn</span>
-              <span>Flask</span>
-            </div>
-            <div class="project-meta">
-              <span>📅 Mar 2025</span>
-              <span>🎬 Recommendations</span>
-            </div>
-            <a href="https://github.com/hetbhalani/movie-recommendation-system" target="_blank" class="project-link">View Project →</a>
-          </div>
-          <div class="project-card">
-            <div class="project-tag">DL</div>
-            <h3>Bicycle vs Motorcycle Classification</h3>
-            <p>Fine-tuned EfficientNetB0 to classify bicycles and motorcycles through Transfer Learning.
-              Fine-tuned on a custom dataset and deployed with Streamlit and FastAPI for real-time image classification.
-              </p>
-            <div class="tech-stack">
-              <span>TensorFlow</span>
-              <span>FastAPI</span>
-              <span>EfficientNetB0</span>
-            </div>
-            <div class="project-meta">
-              <span>📅 Aug 2025</span>
-              <span>🚴‍♂️ Image Classification</span>
-            </div>
-            <a href="https://github.com/hetbhalani/Cycle_vs_Bike" target="_blank" class="project-link">View Project →</a>
-          </div>
-          <div class="project-card">
-            <div class="project-tag">ML</div>
-            <h3>HyperTuna</h3>
-            <p>Built an interactive Streamlit app for real-time hyperparameter tuning of classical ML models.
-              Allows users to visualize performance metrics like accuracy, PCA, and confusion matrix while experimenting with model settings.</p>
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>Streamlit</span>
-              <span>Scikit-learn</span>
-            </div>
-            <div class="project-meta">
-              <span>📅 July 2025</span>
-              <span>🔧 Hyperparameter Tuning</span>
-            </div>
-            <a href="https://github.com/hetbhalani/HyperTuna" target="_blank" class="project-link">View Project →</a>
+        <div class="skill-category">
+          <h3 class="category-title">Web/App</h3>
+          <div class="skills-grid">
+            <span class="skill-badge web-app">FastAPI</span>
+            <span class="skill-badge web-app">Streamlit</span>
+            <span class="skill-badge web-app">Flask</span>
+            <span class="skill-badge web-app">React.js</span>
+            <span class="skill-badge web-app">Express.js</span>
+            <span class="skill-badge web-app">Node.js</span>
+            <span class="skill-badge web-app">Flutter</span>
           </div>
         </div>
-      </section>
-
-      <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4>Teaching Assistant – Data Structures</h4>
-              <p class="timeline-location">Darshan University, Rajkot, Gujarat</p>
-              <p class="timeline-date">Dec 2024 – Mar 2025</p>
-              <ul>
-                <li>Conducted lab sessions on data structures, guiding students in implementing algorithms in C</li>
-                <li>Helped clarify core concepts of DSA and assisted students with practical assignments</li>
-              </ul>
-            </div>
+        <div class="skill-category">
+          <h3 class="category-title">Databases</h3>
+          <div class="skills-grid">
+            <span class="skill-badge databases">MongoDB</span>
+            <span class="skill-badge databases">MS SQL</span>
+            <span class="skill-badge databases">PostgreSQL</span>
           </div>
         </div>
-      </section>
-
-      <section id="journey">
-        <h2>Education Timeline</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4>School</h4>
-              <p>Completed primary schooling from government school of my village</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4>High School</h4>
-              <p>Completed high school from Sorath International School (junagadh)</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h4>B. Tech in Computer Science & Engineering</h4>
-              <p>Currently pursuing B. Tech in Computer Science & Engineering (3rd year) from Darshan University (Rajkot)</p>
-            </div>
+        <div class="skill-category">
+          <h3 class="category-title">Tools</h3>
+          <div class="skills-grid">
+            <span class="skill-badge tools">Git</span>
+            <span class="skill-badge tools">GitHub</span>
+            <span class="skill-badge tools">Linux</span>
+            <span class="skill-badge tools">Docker</span>
+            <span class="skill-badge tools">Postman</span>
+            <span class="skill-badge tools">Terminal/CMD</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="achievements">
-        <h2>Achievements & Highlights</h2>
-        <div class="achievements-list">
-          <div class="achievement-item">
-            <div class="achievement-icon">💻</div>
-            <div class="achievement-content">
-              <h4>Solved 150+ Problems on LeetCode</h4>
-              <p>Strengthened DSA and problem-solving skills through consistent practice</p>
+    <section id="learning">
+      <h2>Currently Learning</h2>
+      <p style="margin-bottom: 20px; color: var(--secondary-text); font-size: 0.9rem;">I believe in continuous learning
+        and love exploring emerging technologies in AI and ML.
+        Here’s what I’m currently diving into, constantly pushing my boundaries to stay ahead in this ever-evolving
+        field.</p>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <div class="learning-header">
+            <div class="learning-icon">🔗</div>
+            <div class="progress-circle" data-progress="60">
+              <svg class="progress-ring" viewBox="0 0 50 50">
+                <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
+                <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
+              </svg>
+              <span class="progress-text">60%</span>
             </div>
           </div>
-          <div class="achievement-item">
-            <div class="achievement-icon">⭐</div>
-            <div class="achievement-content">
-              <h4>Active GitHub Contributor</h4>
-              <p>Active contributor on GitHub with ML/DL projects and collaborative development</p>
-            </div>
-          </div>
-          <div class="achievement-item">
-            <div class="achievement-icon">🏆</div>
-            <div class="achievement-content">
-              <h4>Kaggle Participant</h4>
-              <p>Active contributor on Kaggle with ML/DL projects and data science competitions</p>
-            </div>
-          </div>
-          <div class="achievement-item">
-            <div class="achievement-icon">🔧</div>
-            <div class="achievement-content">
-              <h4>Version Control Expert</h4>
-              <p>Experienced with version control (Git/GitHub) and collaborative development</p>
-            </div>
+          <h3>LangChain & RAG</h3>
+          <p>Learning to build advanced LLM applications using LangChain including RAG pipelines, prompt chaining, and
+            custom agent workflows.</p>
+          <div class="learning-tags">
+            <span>RAG</span>
+            <span>LangChain</span>
           </div>
         </div>
-      </section>
-
-      <section id="more-about">
-        <h2>Beyond Code</h2>
-        <div class="more-about-content">
-          <p>Coding is just one side of me — I’m endlessly curious and love exploring everything. From playing harmonium, singing Gujarati bhajans, editing videos, to chess, gaming, math, astrophysics, philosophy, and cooking — I dive into it all with full passion. I’m also a cinephile and enjoy capturing life through photography and videography.</p>
-          <p>Every hobby feeds my creativity and sharpens my mind, just like building AI models. I thrive on learning, experimenting, and connecting ideas across different worlds.</p>
-      
-          <div class="interests-grid">
-            <div class="interest-card">
-              <h4>🎵 Creative Arts</h4>
-              <p>Harmonium, singing, video editing, photography</p>
-            </div>
-            <div class="interest-card">
-              <h4>🧠 Mind & Logic</h4>
-              <p>Chess, math, astrophysics, philosophy</p>
-            </div>
-            <div class="interest-card">
-              <h4>🎮 Life & Fun</h4>
-              <p>Gaming, cooking, movies & web series, exploring new ideas</p>
+        <div class="learning-card">
+          <div class="learning-header">
+            <div class="learning-icon">🤖</div>
+            <div class="progress-circle" data-progress="70">
+              <svg class="progress-ring" viewBox="0 0 50 50">
+                <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
+                <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
+              </svg>
+              <span class="progress-text">70%</span>
             </div>
           </div>
+          <h3>Fine-tuning LLMs</h3>
+          <p>Exploring model fine-tuning with Hugging Face Transformers to adapt pre-trained models for custom datasets
+            and tasks.</p>
+          <div class="learning-tags">
+            <span>Fine-tuning</span>
+            <span>Hugging Face</span>
+          </div>
         </div>
-      </section>
-      
-      
-
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <p class="contact-text">
-          Let's connect! Whether you want to collaborate, discuss AI, or just say hi! I'm always open to meaningful conversations.
-        </p>
-      
-        <div class="resume-download">
-          <a href="https://drive.google.com/uc?export=download&id=1SOu2SZYA871z5jeLJp26pd3UjtB6uhH5" download="Het_Bhalani_Resume.pdf" class="resume-button">
-            <i class="fa-solid fa-download"></i>
-            Download Resume
-          </a>
+        <div class="learning-card">
+          <div class="learning-header">
+            <div class="learning-icon">🐧</div>
+            <div class="progress-circle" data-progress="30">
+              <svg class="progress-ring" viewBox="0 0 50 50">
+                <circle class="progress-ring-circle bg" cx="25" cy="25" r="20"></circle>
+                <circle class="progress-ring-circle progress" cx="25" cy="25" r="20"></circle>
+              </svg>
+              <span class="progress-text">30%</span>
+            </div>
+          </div>
+          <h3>Linux & CLI</h3>
+          <p>Exploring Linux fundamentals and mastering command-line tools to enhance system control, automation, and
+            development efficiency.</p>
+          <div class="learning-tags">
+            <span>Linux</span>
+          </div>
         </div>
-      
-        <div class="social-icons">
-          <a href="mailto:bhalanihet2006@gmail.com" target="_blank" aria-label="Email">
-            <i class="fa-regular fa-envelope"></i>
-          </a>
-          <a href="https://github.com/hetbhalani" target="_blank" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://x.com/het_bhalani" target="_blank" aria-label="Twitter">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a href="https://linkedin.com/in/het-bhalani-20403b2a8/" target="_blank" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.kaggle.com/hetbhalani9" target="_blank" aria-label="Kaggle">
-            <i class="fa-brands fa-kaggle"></i>
-          </a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card featured">
+          <div class="project-tag">NLP</div>
+          <h3>CineSense – Movie Review Sentiment Analyzer</h3>
+          <p>Scraped IMDb reviews and fine-tuned a RoBERTa model for sentiment classification. Deployed an interactive
+            dashboard for real-time review analysis and polarity visualization.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Streamlit</span>
+            <span>FastAPI</span>
+            <span>Hugging Face Transformers</span>
+          </div>
+          <div class="project-meta">
+            <span>📅 Sep 2025</span>
+            <span>🎯 Sentiment Analysis</span>
+          </div>
+          <a href="https://github.com/hetbhalani/Cine_Sense" target="_blank" class="project-link">View Project →</a>
         </div>
-      </section>
-      
-    </main>
+        <div class="project-card featured">
+          <div class="project-tag">NLP</div>
+          <h3>Text Cleaning Studio</h3>
+          <p>Built a text preprocessing toolkit with noise removal, typo correction, and contraction expansion. Enabled
+            batch file processing and a clean, user-friendly interface for NLP workflows.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>NLP</span>
+            <span>Streamlit</span>
+            <span>FastAPI</span>
+          </div>
+          <div class="project-meta">
+            <span>📅 Aug 2025</span>
+            <span>🔧 Text Preprocessing</span>
+          </div>
+          <a href="https://github.com/hetbhalani/text-clean-studio" target="_blank" class="project-link">View Project
+            →</a>
+        </div>
+        <div class="project-card featured">
+          <div class="project-tag">DL</div>
+          <h3>Neural Network from Scratch</h3>
+          <p>Implemented an ANN architecture (784–64–10) using ReLU and Softmax layers. Derived and coded
+            backpropagation, gradient descent, and categorical cross-entropy loss manually.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>NumPy</span>
+          </div>
+          <div class="project-meta">
+            <span>📅 Jun 2025</span>
+            <span>🧠 From Scratch</span>
+          </div>
+          <a href="https://github.com/hetbhalani/Neural_Network_from_Scratch" target="_blank" class="project-link">View
+            Project →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">ML</div>
+          <h3>Movie Recommendation System</h3>
+          <p>Developed a content-based recommendation engine using TF-IDF and cosine similarity. Integrated Flask web
+            interface for real-time personalized movie suggestions.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>Flask</span>
+          </div>
+          <div class="project-meta">
+            <span>📅 Mar 2025</span>
+            <span>🎬 Recommendations</span>
+          </div>
+          <a href="https://github.com/hetbhalani/movie-recommendation-system" target="_blank" class="project-link">View
+            Project →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">DL</div>
+          <h3>Bicycle vs Motorcycle Classification</h3>
+          <p>Fine-tuned EfficientNetB0 to classify bicycles and motorcycles through Transfer Learning.
+            Fine-tuned on a custom dataset and deployed with Streamlit and FastAPI for real-time image classification.
+          </p>
+          <div class="tech-stack">
+            <span>TensorFlow</span>
+            <span>FastAPI</span>
+            <span>EfficientNetB0</span>
+          </div>
+          <div class="project-meta">
+            <span>📅 Aug 2025</span>
+            <span>🚴‍♂️ Image Classification</span>
+          </div>
+          <a href="https://github.com/hetbhalani/Cycle_vs_Bike" target="_blank" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card">
+          <div class="project-tag">ML</div>
+          <h3>HyperTuna</h3>
+          <p>Built an interactive Streamlit app for real-time hyperparameter tuning of classical ML models.
+            Allows users to visualize performance metrics like accuracy, PCA, and confusion matrix while experimenting
+            with model settings.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Streamlit</span>
+            <span>Scikit-learn</span>
+          </div>
+          <div class="project-meta">
+            <span>📅 July 2025</span>
+            <span>🔧 Hyperparameter Tuning</span>
+          </div>
+          <a href="https://github.com/hetbhalani/HyperTuna" target="_blank" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2025 Het Bhalani | Built with ❤️ </p>
-    </footer>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>Teaching Assistant – Data Structures</h4>
+            <p class="timeline-location">Darshan University, Rajkot, Gujarat</p>
+            <p class="timeline-date">Dec 2024 – Mar 2025</p>
+            <ul>
+              <li>Conducted lab sessions on data structures, guiding students in implementing algorithms in C</li>
+              <li>Helped clarify core concepts of DSA and assisted students with practical assignments</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+    <section id="journey">
+      <h2>Education Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>School</h4>
+            <p>Completed primary schooling from government school of my village</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>High School</h4>
+            <p>Completed high school from Sorath International School (junagadh)</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h4>B. Tech in Computer Science & Engineering</h4>
+            <p>Currently pursuing B. Tech in Computer Science & Engineering (3rd year) from Darshan University (Rajkot)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements & Highlights</h2>
+      <div class="achievements-list">
+        <div class="achievement-item">
+          <div class="achievement-icon">💻</div>
+          <div class="achievement-content">
+            <h4>Solved 160+ Problems on LeetCode</h4>
+            <p>Strengthened DSA and problem-solving skills through consistent practice</p>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon">🦤</div>
+          <div class="achievement-content">
+            <h4>Kaggle Participant</h4>
+            <p>Active contributor on Kaggle with ML/DL projects and data science competitions</p>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon" >👥</div>
+          <div class="achievement-content">
+            <h4>Hackathon Team Lead</h4>
+              <p>Led a 5‑member team to build an ML-powered mobile app. <a href="https://github.com/hetbhalani/ML-Based-Personal-Finance-Optimizer" target="_blank" >View Project</a></p>
+          </div>
+        </div>
+        <div class="achievement-item">
+          <div class="achievement-icon" >🏆</div>
+          <div class="achievement-content">
+            <h4>Winner — Coding + Treasure Hunt Event</h4>
+              <p>1st place in a combined coding and treasure-hunt competition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="more-about">
+      <h2>Beyond Code</h2>
+      <div class="more-about-content">
+        <p>Coding is just one side of me — I’m endlessly curious and love exploring everything. From playing harmonium,
+          singing Gujarati bhajans, editing videos, to chess, gaming, math, astrophysics, philosophy, and cooking — I
+          dive into it all with full passion. I’m also a cinephile and enjoy capturing life through photography and
+          videography.</p>
+        <p>Every hobby feeds my creativity and sharpens my mind, just like building AI models. I thrive on learning,
+          experimenting, and connecting ideas across different worlds.</p>
+
+        <div class="interests-grid">
+          <div class="interest-card">
+            <h4>🎵 Creative Arts</h4>
+            <p>Harmonium, singing, video editing, photography</p>
+          </div>
+          <div class="interest-card">
+            <h4>🧠 Mind & Logic</h4>
+            <p>Chess, math, astrophysics, philosophy</p>
+          </div>
+          <div class="interest-card">
+            <h4>🎮 Life & Fun</h4>
+            <p>Gaming, cooking, movies & web series, exploring new ideas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p class="contact-text">
+        Let's connect! Whether you want to collaborate, discuss AI, or just say hi! I'm always open to meaningful
+        conversations.
+      </p>
+
+      <div class="resume-download">
+        <a href="https://drive.google.com/uc?export=download&id=1SOu2SZYA871z5jeLJp26pd3UjtB6uhH5"
+          download="Het_Bhalani_Resume.pdf" class="resume-button">
+          <i class="fa-solid fa-download"></i>
+          Download Resume
+        </a>
+      </div>
+
+      <div class="social-icons">
+        <a href="mailto:bhalanihet2006@gmail.com" target="_blank" aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="https://github.com/hetbhalani" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://x.com/het_bhalani" target="_blank" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://linkedin.com/in/het-bhalani-20403b2a8/" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.kaggle.com/hetbhalani9" target="_blank" aria-label="Kaggle">
+          <i class="fa-brands fa-kaggle"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Het Bhalani | Built with ❤️ </p>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
