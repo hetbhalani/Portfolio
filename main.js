@@ -6,33 +6,40 @@ const html = document.documentElement;
 const savedTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', savedTheme);
 
-themeToggle.addEventListener('click', () => {
-  const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-});
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  }
-);
+const supportsIntersectionObserver = 'IntersectionObserver' in window;
+const observer = supportsIntersectionObserver
+  ? new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+  )
+  : null;
 
 // Scroll to top button functionality
 const scrollTopBtn = document.getElementById('scroll-top');
 
 window.addEventListener('scroll', () => {
+  if (!scrollTopBtn) return;
+
   if (window.scrollY > 300) {
     scrollTopBtn.classList.add('visible');
   } else {
@@ -40,20 +47,28 @@ window.addEventListener('scroll', () => {
   }
 });
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-});
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('section');
   sections.forEach((section) => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
+
+    if (observer) {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      observer.observe(section);
+    } else {
+      section.style.opacity = '1';
+      section.style.transform = 'translateY(0)';
+    }
   });
 
   const navbar = document.querySelector('.navbar');
@@ -109,36 +124,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Scrollspy: highlight the active nav-link based on section visibility, WITHOUT changing the URL
-  const spyOptions = {
-    root: null,
-    // We want the section to be considered active when more than ~40% is visible.
-    threshold: 0.4,
-    // Compensate visually for the fixed navbar so the observer triggers when the content is under the navbar
-    rootMargin: `-${getNavbarHeight()}px 0px -40% 0px`
-  };
-
   function clearActiveLinks() {
     navLinks.forEach((l) => l.classList.remove('active'));
   }
 
-  spyObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.id;
-      const link = document.querySelector(`.nav-link[href="#${id}"]`);
-      if (!link) return;
+  if (supportsIntersectionObserver) {
+    const spyOptions = {
+      root: null,
+      // We want the section to be considered active when more than ~40% is visible.
+      threshold: 0.4,
+      // Compensate visually for the fixed navbar so the observer triggers when the content is under the navbar
+      rootMargin: `-${getNavbarHeight()}px 0px -40% 0px`
+    };
 
-      if (entry.isIntersecting) {
-        clearActiveLinks();
-        link.classList.add('active');
-      } else {
-        if (link.classList.contains('active') && !entry.isIntersecting) {
-          link.classList.remove('active');
+    spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        const link = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (!link) return;
+
+        if (entry.isIntersecting) {
+          clearActiveLinks();
+          link.classList.add('active');
+        } else {
+          if (link.classList.contains('active') && !entry.isIntersecting) {
+            link.classList.remove('active');
+          }
         }
-      }
-    });
-  }, spyOptions);
+      });
+    }, spyOptions);
 
-  sections.forEach((sec) => spyObserver.observe(sec));
+    sections.forEach((sec) => spyObserver.observe(sec));
+  }
 
 
   // Fix progress circles

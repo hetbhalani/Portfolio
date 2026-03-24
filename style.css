@@ -54,6 +54,7 @@ body {
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -75,8 +76,8 @@ body {
   border-radius: 100px;
   padding: 0 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  min-width: 400px;
+  width: max-content;
+  max-width: calc(100% - 40px);
 }
 
 [data-theme="dark"] .navbar {
@@ -189,6 +190,7 @@ body {
 
 main {
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 60px 24px;
 }
@@ -321,7 +323,7 @@ p {
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 0;
 }
 
 .tagline {
@@ -680,6 +682,7 @@ p {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  overflow-wrap: anywhere;
 }
 
 /* Removed empty .project-card.featured ruleset to satisfy linter */
@@ -746,6 +749,25 @@ p {
 
 .project-link:hover {
   opacity: 0.7;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.project-link.secondary {
+  color: var(--accent-teal);
+  margin-left: auto;
+}
+
+.project-link.demo {
+  color: var(--accent-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .timeline {
@@ -909,7 +931,7 @@ p {
 
 #contact {
   text-align: left;
-  padding: 3rem 1rem;
+  padding: 0;
   margin-bottom: 0;
 }
 
@@ -1060,7 +1082,7 @@ footer {
 
   .navbar {
     top: 10px;
-    min-width: calc(100% - 30px);
+    width: calc(100% - 30px);
     padding: 0 12px;
     height: 50px;
   }
@@ -1136,6 +1158,10 @@ footer {
 
   .project-card {
     padding: 18px;
+  }
+
+  .project-actions {
+    gap: 10px;
   }
 
   .interests-grid {
@@ -1270,6 +1296,16 @@ footer {
     font-size: 0.75rem;
   }
 
+  .project-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .project-link.secondary {
+    margin-left: 0;
+  }
+
   .contact-text {
     font-size: 0.9rem;
   }
@@ -1308,7 +1344,7 @@ footer {
 /* Extra small devices */
 @media (max-width: 360px) {
   .navbar {
-    min-width: calc(100% - 20px);
+    width: calc(100% - 20px);
     padding: 0 8px;
   }
 
